@@ -1,1 +1,1 @@
-# straydogs
+# Stray Dogs
