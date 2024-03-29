@@ -13,6 +13,8 @@
     background-color: var(--white-90);
 }
 
+
+
 /* ESTILIZANDO A NAVBAR */
 
 nav{
@@ -20,6 +22,8 @@ nav{
     height: 65px;
     padding: 10px 10px;
 }
+
+/* MOBILE FIRST - MENU */
 
 /* ESTILIZANDO O MENU HAMBURGER */
 
@@ -77,4 +81,58 @@ nav{
 .showMenu {
 transform: translatex(0);
 opacity: 1;
+}
+
+/* FIM DA ESTILIZAÇÃO MOBILE */
+
+@media screen and (min-width: 768px) {
+
+
+    *{
+        background-color: var(--gray-90);
+    }
+    
+    body{
+        margin: 0 auto;
+        max-width: 80%;
+        background-color: var(--white-90);
+        height: 100vh;
+    }
+
+        /* ESTILIZAÇÃO DO MENU PARA TELAS MAIORES */
+
+    nav {
+        background-color: var(--blue-primary);
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .menu {
+        position: static;
+        transform: none;
+        transition: none;
+        background: transparent;
+        color: var(--white-90);
+        list-style: none;
+        padding-top: 0;
+        opacity: 1;
+        width: auto;
+        display: flex;
+        flex-direction: row; 
+        padding-bottom: 0px; 
+        gap: 50px;
+        height: auto;
+        
+       }
+
+    .hamburger {
+        display: none;
+    }
+
+    
+
+    
 }
