@@ -154,7 +154,7 @@ main{
 /* FIM TITULO E SUBTITULO MAIN */
 
 
-/* INICIO SOBRE */
+/* INICIO CONTEUDO */
 
 
 
@@ -197,6 +197,64 @@ main{
     box-sizing: border-box;
     border-radius: 50%;
 }
+
+/* INICIO AUMIGOS */
+
+#aumigos{
+    background-color: var(--blue-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.card-aumigos{
+    background-color: var(--white-90);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-aumigos img {
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.carrossel-aumigos {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--white-90);
+    background-color: var(--blue-secondary);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--gray-90);
+}
+
+
+/* FIM AUMIGOS */
 
 
 /* FIM MAIN */
