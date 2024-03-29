@@ -21,9 +21,18 @@ nav{
     background-color: var(--blue-primary);
     height: 65px;
     padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* MOBILE FIRST - MENU */
+
+
+.nav-title { 
+    background-color: transparent;
+    color: var(--white-90);
+}
 
 /* ESTILIZANDO O MENU HAMBURGER */
 
@@ -54,8 +63,7 @@ nav{
 
 .menuItem{
     text-decoration: none;
-    color: inherit;
-    
+    color: inherit;  
 }
 
 /* ESTILIZANDO O BOTÃO DO MENU HAMBURGER */
@@ -83,7 +91,7 @@ transform: translatex(0);
 opacity: 1;
 }
 
-/* FIM DA ESTILIZAÇÃO MOBILE */
+/* FIM DA ESTILIZAÇÃO MOBILE DO MENU */
 
 @media screen and (min-width: 768px) {
 
@@ -94,45 +102,72 @@ opacity: 1;
     
     body{
         margin: 0 auto;
-        max-width: 80%;
+        max-width: 980px;
         background-color: var(--white-90);
         height: 100vh;
     }
 
         /* ESTILIZAÇÃO DO MENU PARA TELAS MAIORES */
 
+        /* OCULTAR O BOTÃO DO MENU HAMBUGER */
+
+    .hamburger {
+        display: none;
+    }
+
     nav {
-        background-color: var(--blue-primary);
-        padding: 10px 10px;
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+    .nav-title {
+        position: absolute; 
+        left: 0; 
+        padding-left: 20px;
+        background-color: transparent;
+        color: var(--white-90);
+        margin-left: 10px;
+    }
     
+
 
     .menu {
         position: static;
         transform: none;
         transition: none;
         background: transparent;
-        color: var(--white-90);
         list-style: none;
         padding-top: 0;
         opacity: 1;
         width: auto;
         display: flex;
         flex-direction: row; 
-        padding-bottom: 0px; 
-        gap: 50px;
         height: auto;
+        padding: 0;
         
        }
 
-    .hamburger {
-        display: none;
-    }
+       
+       .menu li {
+        position: relative;
+        padding: 10px 20px;
+       } 
 
+       .menu li:not(:first-child)::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 50%;
+        background-color: var(--white-90);
+    }
     
+       
+
 
     
 }
