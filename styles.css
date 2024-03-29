@@ -1,0 +1,80 @@
+:root{
+    --blue-primary: #6499E9;
+    --blue-secondary: #9EDDFF;
+    --white-90:#FBF9F1;
+    --gray-90:#E5E1DA;
+}
+
+/*RESET DE ESTILO*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white-90);
+}
+
+/* ESTILIZANDO A NAVBAR */
+
+nav{
+    background-color: var(--blue-primary);
+    height: 65px;
+    padding: 10px 10px;
+}
+
+/* ESTILIZANDO O MENU HAMBURGER */
+
+.menu, .menu *{
+    background-color: transparent;
+}
+
+.menu {
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    left: 0;
+    background: var(--blue-primary);
+    color: var(--white-90);
+    list-style: none;
+    padding-top: 4rem;
+    opacity: 0;
+    width: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    padding-bottom: 20px; 
+
+   }
+
+   /* ESTILIZANDO O CONTEÚDO DENTRO DO MENU */
+
+.menuItem{
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+/* ESTILIZANDO O BOTÃO DO MENU HAMBURGER */
+
+
+.hamburger {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    padding: 4px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+   }
+
+.hamburger span{
+    background-color: transparent;
+    color: var(--white-90);  
+   
+}
+/* ESTILIZAÇÃO AO CLICAR NO BOTÃO DO MENU HAMBURGER */
+
+.showMenu {
+transform: translatex(0);
+opacity: 1;
+}
