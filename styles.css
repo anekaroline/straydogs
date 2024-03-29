@@ -10,9 +10,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--white-90);
 }
 
+body{
+    background-color: var(--white-90);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* ESTILIZANDO A NAVBAR */
@@ -24,6 +29,10 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 300;
 }
 
 /* MOBILE FIRST - MENU */
@@ -38,24 +47,26 @@ nav{
 
 .menu, .menu *{
     background-color: transparent;
+    z-index:9999;
 }
 
 .menu {
     position: fixed;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    top:65px;
     left: 0;
     background: var(--blue-primary);
     color: var(--white-90);
     list-style: none;
-    padding-top: 4rem;
     opacity: 0;
     width: 25%;
     text-align: center;
     display: flex;
     flex-direction: column; 
     gap: 10px;
-    padding-bottom: 20px; 
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
 
    }
 
@@ -79,10 +90,10 @@ nav{
     cursor: pointer;
    }
 
-.hamburger span{
+.hamburger i{
     background-color: transparent;
-    color: var(--white-90);  
-   
+    color: var(--white-90); 
+ 
 }
 /* ESTILIZAÇÃO AO CLICAR NO BOTÃO DO MENU HAMBURGER */
 
@@ -93,19 +104,147 @@ opacity: 1;
 
 /* FIM DA ESTILIZAÇÃO MOBILE DO MENU */
 
+
+/* INICO DA ESTILIZAÇÃO DO BANNER */
+
+.banner{
+    position: relative;
+    overflow: hidden;
+    margin-top: 65px;
+}
+
+.banner-img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* FIM DA ESTILIZAÇÃO DO BANNER */
+
+/* INICIO MAIN */
+
+/* INICIO TITULO E SUBTITULO MAIN */
+
+main{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.title-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.title-main h1{
+    font-size: 1.2rem;
+}
+
+.title-main h2{
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+/* FIM TITULO E SUBTITULO MAIN */
+
+
+/* INICIO SOBRE */
+
+
+
+.topic-main{
+    padding: 20px 20px 10px 20px;   
+}
+
+.topic-main h2{
+    font-size: 1rem;
+}
+.conteudo-main{
+    padding: 20px;
+}
+
+.conteudo-main article {
+    text-align: justify;
+}
+
+.conteudo-doacoes{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.doacoes-img{
+    position: relative;
+    overflow: hidden;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+
+.doacoes-img img{
+    max-width: 60%;
+    max-height: 60%;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+
+/* FIM MAIN */
+
+/* INICIO FOOTER */
+
+footer {
+    margin-top: auto;
+    background-color: var(--blue-primary);
+    height: auto;
+    color: var(--white-90);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer span{
+    font-weight: bold;
+}
+
+.redes-sociais i{
+    color: var(--white-90);
+}
+
+.contatos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* FIM FOOTER */
+
 @media screen and (min-width: 768px) {
 
 
-    *{
+    html {
         background-color: var(--gray-90);
     }
     
-    body{
+    body {
         margin: 0 auto;
         max-width: 980px;
-        background-color: var(--white-90);
-        height: 100vh;
     }
+
+    /* INICIO HEADER */
 
         /* ESTILIZAÇÃO DO MENU PARA TELAS MAIORES */
 
@@ -165,9 +304,89 @@ opacity: 1;
         height: 50%;
         background-color: var(--white-90);
     }
+
+    /* FIM DA ESTILIZAÇÃO DO MENU PARA TELAS MAIORES */
+
+    /* FIM HEADER */
+
+    /* INICIO BANNER */
+    .banner{
+        margin-top: 0;
+    }
+    /* FIM BANNER */
     
        
 
+        /* INICIO MAIN */
+
+    /* INICIO TITULO E SUBTITULO MAIN */
+
+
+    .title-main h1{
+        font-size: 1.8rem;
+    }
+
+    .title-main h2{
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+
+    /* FIM TITULO E SUBTITULO MAIN */
+
+    /* INICIO DOACOES */
+
+    .conteudo-doacoes{
+        flex-direction: row;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .doacoes-img{
+        margin-bottom: 0;
+    }
+
+    .doacoes-img img{
+        max-width: 90%;
+        max-height: 90%;
+        width: auto;
+        height: auto;
+        box-sizing: border-box;
+        border-radius: 50%;
+    }
+    
+    /* FIM DOACOES */
+
+    /* FIM MAIN */
+
+    /* INICIO FOOTER */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer span{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.redes-sociais i{
+    color: var(--white-90);
+}
+
+.contatos{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+address{
+    text-align: right;
+}
+
+/* FIM FOOTER */
 
     
 }
