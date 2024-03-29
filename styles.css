@@ -223,11 +223,23 @@ footer span{
     color: var(--white-90);
 }
 
+.redes-sociais i:not(:first-child)::before{
+    margin-left: 10px;
+}
+
 .contatos{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+address{
+    text-align: center;
+}
+
+footer{
+    font-size: x-small;
 }
 
 /* FIM FOOTER */
@@ -364,6 +376,8 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: medium;
+    
 }
 
 footer span{
